@@ -1,0 +1,11 @@
+package com.mangxiao.samples.dubbo.consumer;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class DubboSampleConsumerApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(DubboSampleConsumerApplication.class, args);
+    }
+}
