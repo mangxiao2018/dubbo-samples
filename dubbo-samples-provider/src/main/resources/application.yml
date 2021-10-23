@@ -9,4 +9,4 @@ dubbo:
   protocol:
     name: dubbo
     port: 20880
-    scan: com.crossyf.dubbo.service.impl
+    scan: com.mangxiao.samples.dubbo.provider.service.impl
