@@ -52,18 +52,12 @@ import java.util.UUID;
  * Helper class to start an embedded instance of standalone (non clustered) ZooKeeper.
  * 
  * NOTE: at least an external standalone server (if not an ensemble) are recommended, even for
- * {@link org.springframework.xd.dirt.server.singlenode.SingleNodeApplication}
- * 
+ *
  * @author Patrick Peralta
  * @author Mark Fisher
  * @author David Turanski
  */
 public class EmbeddedZooKeeper implements SmartLifecycle {
-
-	/**
-	 * Logger.
-	 */
-	private static final Logger logger = LoggerFactory.getLogger(EmbeddedZooKeeper.class);
 
 	/**
 	 * ZooKeeper client port. This will be determined dynamically upon startup.
@@ -208,7 +202,7 @@ public class EmbeddedZooKeeper implements SmartLifecycle {
 			}
 			catch (InterruptedException e) {
 				Thread.currentThread().interrupt();
-				logger.warn("Interrupted while waiting for embedded ZooKeeper to exit");
+				System.out.println("Interrupted while waiting for embedded ZooKeeper to exit");
 				// abandoning zk thread
 				zkServerThread = null;
 			}
@@ -263,7 +257,7 @@ public class EmbeddedZooKeeper implements SmartLifecycle {
 					errorHandler.handleError(e);
 				}
 				else {
-					logger.error("Exception running embedded ZooKeeper", e);
+					System.out.println("Exception running embedded ZooKeeper" + e);
 				}
 			}
 		}

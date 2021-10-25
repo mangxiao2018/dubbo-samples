@@ -10,7 +10,7 @@ import java.util.concurrent.CountDownLatch;
 
 @SpringBootApplication
 @EnableHystrix
-@EnableDubbo(scanBasePackages = {"org.apache.dubbo.spring.boot.provider.impl"})
+@EnableDubbo(scanBasePackages = {"com.mangxiao.samples.dubbo.provider.service.impl"})
 public class DubboSampleProviderApplication {
     public static void main(String[] args) throws Exception{
         new EmbeddedZooKeeper(2181, false).start();

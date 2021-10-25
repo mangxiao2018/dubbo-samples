@@ -1,14 +1,19 @@
 package com.mangxiao.samples.dubbo.provider.service.impl;
 
-import com.alibaba.dubbo.config.annotation.Service;
 import com.mangxiao.samples.dubbo.provider.model.Student;
 import com.mangxiao.samples.dubbo.provider.service.StudentService;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
+import org.apache.dubbo.config.annotation.DubboService;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Service(version = "1.0.0",timeout = 3000)
+@DubboService(version = "1.0.0")
 public class StudentServiceImpl implements StudentService {
+    @HystrixCommand(commandProperties = {
+            @HystrixProperty(name = "circuitBreaker.requestVolumeThreshold", value = "10"),
+            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "2000")})
     @Override
     public List<Student> getAll() {
         List<Student> dataList = new ArrayList<>();
