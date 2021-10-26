@@ -16,7 +16,7 @@ public class StudentServiceImpl implements StudentService {
             @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "2000")})
     @Override
     public List<Student> getAll() {
-        List<Student> dataList = new ArrayList<>();
+        List<Student> dataList = new ArrayList<Student>();
         Student student = new Student();
         student.setStuNo("20211022001");
         student.setChineseScore(89);
