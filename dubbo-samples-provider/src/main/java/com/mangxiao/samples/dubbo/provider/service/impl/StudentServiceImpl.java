@@ -11,9 +11,7 @@ import java.util.List;
 
 @DubboService(version = "1.0.0")
 public class StudentServiceImpl implements StudentService {
-    @HystrixCommand(commandProperties = {
-            @HystrixProperty(name = "circuitBreaker.requestVolumeThreshold", value = "10"),
-            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "2000")})
+    
     @Override
     public List<Student> getAll() {
         List<Student> dataList = new ArrayList<Student>();
