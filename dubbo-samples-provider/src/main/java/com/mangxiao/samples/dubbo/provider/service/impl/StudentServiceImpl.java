@@ -2,8 +2,6 @@ package com.mangxiao.samples.dubbo.provider.service.impl;
 
 import com.mangxiao.samples.dubbo.provider.model.Student;
 import com.mangxiao.samples.dubbo.provider.service.StudentService;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import org.apache.dubbo.config.annotation.DubboService;
 
 import java.util.ArrayList;
@@ -11,7 +9,7 @@ import java.util.List;
 
 @DubboService(version = "1.0.0")
 public class StudentServiceImpl implements StudentService {
-    
+
     @Override
     public List<Student> getAll() {
         List<Student> dataList = new ArrayList<Student>();

@@ -18,12 +18,12 @@ package com.mangxiao.samples.dubbo.provider.customer;
 
 import com.mangxiao.samples.dubbo.provider.model.Student;
 import com.mangxiao.samples.dubbo.provider.service.StudentService;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+//import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.hystrix.EnableHystrix;
+//import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.stereotype.Service;
 
@@ -34,7 +34,7 @@ import java.util.List;
  */
 @SpringBootApplication
 @Service
-@EnableHystrix
+//@EnableHystrix
 @EnableDubbo
 public class ConsumerApplication {
 
@@ -50,7 +50,7 @@ public class ConsumerApplication {
         System.out.println("result: " + dataList);
     }
 
-    @HystrixCommand(fallbackMethod = "reliable")
+   // @HystrixCommand(fallbackMethod = "reliable")
     public List<Student> getAll() {
         // According to author's original purpose, the fallbackMethod is triggered by remote RpcException but not NPE of demoService.
         return studentService.getAll();
