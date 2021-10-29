@@ -1,6 +1,8 @@
-package com.mangxiao.samples.dubbo.provider.model;
+package com.mangxiao.dubbo.samples.common.model;
 
-public class Student {
+import java.io.Serializable;
+
+public class Student implements Serializable {
 
     private long id;
     private String stuName;

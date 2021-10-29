@@ -1,26 +1,15 @@
 package com.mangxiao.samples.dubbo.consumer;
 
-import com.mangxiao.samples.dubbo.provider.model.Student;
-import com.mangxiao.samples.dubbo.provider.service.StudentService;
+import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import java.util.List;
-
+@EnableDubbo
 @SpringBootApplication
 public class DubboSampleConsumerApplication {
 
-//    @DubboReference(version = "1.0.0")
-//    private StudentService studentService;
-
-    public static void main(String[] args) {
-//        SpringApplication.run(DubboSampleConsumerApplication.class, args);
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
-                new String[] { "spring/dubbo-samples-ws-consumer.xml" });
-        context.start();
-        StudentService studentService = (StudentService)context.getBean("studentService");
-        List<Student> dataList = studentService.getAll();
-        System.out.println("====dataList:" + dataList.toString());
+    public static void main(String[] args) throws Exception {
+        SpringApplication.run(DubboSampleConsumerApplication.class, args);
     }
 
 }

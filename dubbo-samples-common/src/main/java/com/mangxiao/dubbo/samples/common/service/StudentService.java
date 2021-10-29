@@ -1,6 +1,8 @@
-package com.mangxiao.samples.dubbo.provider.service;
+package com.mangxiao.dubbo.samples.common.service;
 
-import com.mangxiao.samples.dubbo.provider.model.Student;
+
+
+import com.mangxiao.dubbo.samples.common.model.Student;
 
 import java.util.List;
 
