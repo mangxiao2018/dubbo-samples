@@ -4,11 +4,11 @@ server:
     context-path: /
 spring:
   application:
-    name: dubbo-samples-providerx
+    name: dubbo-samples-provider
 dubbo:
   application:
-    id: dubbo-samples-providerx
-    name: dubbo-samples-providerx
+    id: dubbo-samples-provider
+    name: dubbo-samples-provider
   registry:
     address: zookeeper://8.131.87.108:2181
     timeout: 25000
