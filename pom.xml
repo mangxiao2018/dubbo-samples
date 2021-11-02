@@ -15,6 +15,7 @@
         <module>dubbo-samples-provider</module>
         <module>dubbo-samples-consumer</module>
         <module>hessian-samples-provider</module>
+        <module>hessian-samples-consumer</module>
     </modules>
 
 </project>

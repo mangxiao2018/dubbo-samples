@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;
 
-@DubboService(version = "1.0.1")
+@DubboService(version = "1.0.1", timeout = 25000)
 @Component
 public class StudentServiceImpl implements StudentService {
 

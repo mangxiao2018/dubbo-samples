@@ -1,0 +1,19 @@
+server:
+  port: 8086
+  servlet:
+    context-path: /
+spring:
+  application:
+    name: hessian-samples-consumer
+dubbo:
+  application:
+    id: hessian-samples-consumer
+    name: hessian-samples-consumer
+  registry:
+    address: zookeeper://8.131.87.108:2181
+    timeout: 25000
+  consumer:
+    timeout: 25000
+    registry: studentRegistry
+  monitor:
+    protocol: registry

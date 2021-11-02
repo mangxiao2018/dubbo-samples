@@ -4,19 +4,21 @@ server:
     context-path: /
 spring:
   application:
-    name: dubbo-samples-providerx
+    name: hessian-samples-provider
 dubbo:
   application:
-    id: dubbo-samples-providerx
-    name: dubbo-samples-providerx
+    id: hessian-samples-provider
+    name: hessian-samples-provider
   registry:
     address: zookeeper://8.131.87.108:2181
     timeout: 25000
+    id: studentRegistry
   protocol:
     port: 8099
     name: hessian
-    server: jetty
+    server: servlet
   provider:
-    token: true
+    token: false
+    protocol: hessian
   monitor:
     protocol: registry
