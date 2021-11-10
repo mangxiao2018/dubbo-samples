@@ -16,6 +16,7 @@
         <module>dubbo-samples-consumer</module>
         <module>hessian-samples-provider</module>
         <module>hessian-samples-consumer</module>
+        <module>testng-samples-dubbo</module>
     </modules>
 
 </project>

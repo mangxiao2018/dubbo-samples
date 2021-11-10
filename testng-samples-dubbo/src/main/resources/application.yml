@@ -1,0 +1,22 @@
+server:
+  port: 8087
+  servlet:
+    context-path: /
+spring:
+  application:
+    name: testng-samples-dubbo
+dubbo:
+  application:
+    id: testng-samples-dubbo
+    name: testng-samples-dubbo
+  registry:
+    address: zookeeper://8.131.87.108:2181
+    timeout: 25000
+  protocol:
+    port: 20881
+    name: dubbo
+  consumer:
+    token: true
+    timeout: 25000
+  monitor:
+    protocol: registry
