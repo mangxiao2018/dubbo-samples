@@ -21,4 +21,8 @@ public class StudentServiceTestCase extends TestCaseBase {
             System.out.println("students:" + st.toString());
         }
     }
+
+    public void testX(){
+
+    }
 }
